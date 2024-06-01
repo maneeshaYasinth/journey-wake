@@ -36,7 +36,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1 className="text-3xl font-bold mb-4">Transit Buddy</h1>
+      <h1 className="text-3xl font-bold mb-4">Journey Wake</h1>
       <Map
         center={currentLocation || { lat: -3.745, lng: -38.523 }}
         onClick={handleMapClick}
