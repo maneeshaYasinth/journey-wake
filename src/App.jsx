@@ -3,6 +3,7 @@ import StartPage from "./components/StartPage/StartPage";
 import MainMap from "./components/MainMap/MainMap";
 import TurnOn from "./components/TurneOnLocation/TurnOn";
 import MapNew from "./components/MapNew/MapNew";
+import WakeUp from "./components/WakeUp/WakeUp";
 
 
 const App = () => {
@@ -10,8 +11,9 @@ const App = () => {
     <div>
       <StartPage />
       {/* <TurnOn/> */}
-      {/* <MainMap/> */}
+      <MainMap/>
       <MapNew/>
+      <WakeUp/>
    
     </div>
   );

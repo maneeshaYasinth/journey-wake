@@ -5,7 +5,7 @@ import Button from "../Button/Button";
 
 const MapNew = () => {
   return (
-    <div className=" flex flex-col">
+    <div className=" flex flex-col mt-20">
       <section className=" flex flex-col justify-center text-center items-center md:px-20">
         {/* map display */}
         <div>
