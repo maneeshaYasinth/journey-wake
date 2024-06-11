@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from '../Button/Button'
+import { Link } from 'react-router-dom'
 
 const TurnOn = () => {
   return (
@@ -13,9 +14,10 @@ const TurnOn = () => {
             </h2>
         </div>
         <div className=' mt-10'>
-            <Button className=" text-2xl md:text-3xl"
+        <Link to={"/map"}><Button className=" text-2xl md:text-3xl"
             text={"Turn On Location"}
             />
+            </Link>
         </div>
     </div>
   )

@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { GoogleMap, LoadScript, Marker, useJsApiLoader } from "@react-google-maps/api";
-import { getDistance } from 'geolib';
+import {
+  GoogleMap,
+  LoadScript,
+  Marker,
+  useJsApiLoader,
+} from "@react-google-maps/api";
+import { getDistance } from "geolib";
 
 const containerStyle = {
   width: "100%",
@@ -14,7 +19,7 @@ const center = {
 
 const MapComponent = () => {
   const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
+    id: "google-map-script",
     googleMapsApiKey: "AIzaSyBST9IE1oYAtjIM6-uJnqq_IgPe4wA8hkQ", // Make sure to replace this with your actual API key
   });
 
@@ -24,7 +29,7 @@ const MapComponent = () => {
   const [alertDistance, setAlertDistance] = useState(1000); // default alert distance in meters
   const [distance, setDistance] = useState(null);
 
-  const handleLoad = map => setMap(map);
+  const handleLoad = (map) => setMap(map);
   const handleUnmount = () => setMap(null);
 
   const handleMapClick = (e) => {
@@ -69,17 +74,17 @@ const MapComponent = () => {
         onUnmount={handleUnmount}
         onClick={handleMapClick}
       >
-        {currentPosition && (
-          <Marker position={currentPosition} label="You" />
-        )}
-        {destination && (
-          <Marker position={destination} label="Destination" />
-        )}
+        {currentPosition && <Marker position={currentPosition} label="You" />}
+        {destination && <Marker position={destination} label="Destination" />}
       </GoogleMap>
       <div className="distance-selector">
         <label>
           Set alert distance (meters):
-          <input type="number" value={alertDistance} onChange={handleDistanceChange} />
+          <input
+            type="number"
+            value={alertDistance}
+            onChange={handleDistanceChange}
+          />
         </label>
       </div>
       <div>
@@ -100,7 +105,9 @@ const MapComponent = () => {
         </div>
       )}
     </div>
-  ) : <></>;
+  ) : (
+    <></>
+  );
 };
 
 export default MapComponent;
