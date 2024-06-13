@@ -3,14 +3,15 @@ import { FaLocationArrow } from "react-icons/fa";
 import { MdMyLocation } from "react-icons/md";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button";
-import MainMap from "../MainMap/MainMap";
+import PlaceMap from "../PlaceMap/PlaceMap";
 const MapNew = () => {
   return (
     <div className=" flex flex-col mt-20">
       <section className=" flex flex-col justify-center text-center items-center md:px-20 ">
         {/* map display */}
         <div>
-          <MainMap />
+          {/* <MainMap /> */}
+          <PlaceMap />
         </div>
         {/* set location */}
         <div className=" font-poppins bg-white p-4 px-5 rounded-2xl shadow-xl shadow-blue-900 md:p-20 ">
@@ -62,7 +63,6 @@ const MapNew = () => {
             />
           </Link>
         </div>
-       
       </section>
     </div>
   );
