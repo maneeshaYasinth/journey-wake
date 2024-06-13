@@ -65,7 +65,7 @@ const MapComponent = () => {
 
   return isLoaded ? (
     <div>
-      <h1>Transit Buddy</h1>
+      <h1></h1>
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={currentPosition.lat !== 0 ? currentPosition : center}
